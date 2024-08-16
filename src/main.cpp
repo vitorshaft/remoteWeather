@@ -18,6 +18,8 @@ const int mqtt_port = 8883;
 const char* mqtt_user = "USERNAME";
 const char* mqtt_pass = "USER PASSWORD";
 
+const char* willTopic = "station/1/solarPanel/event/will";
+
 // Configurações dos sensores
 #define DHTPIN 4          // Pino onde o sensor DHT está conectado
 #define DHTTYPE DHT11     // Tipo de sensor DHT
@@ -75,7 +77,7 @@ void reconnect() {
   // Loop até reconectar
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    if (client.connect("ESP32Client", mqtt_user, mqtt_pass)) {
+    if (client.connect("ESP32Client", mqtt_user, mqtt_pass,willTopic, 0, false,"")) {
       Serial.println("connected");
     } else {
       Serial.print("failed, rc=");
