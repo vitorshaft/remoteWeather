@@ -9,14 +9,14 @@
 #include <BH1750.h>
 
 // Configurações da rede Wi-Fi
-const char* ssid = "DUARTE DOMINGUES";
-const char* password = "recife2014";
+const char* ssid = "YOUR LOCAL WIFI";
+const char* password = "WIFI PASSWORD";
 
 // Configurações do MQTT
-const char* mqtt_server = "d7af4aea7e0c42e3815a792edcb07c24.s1.eu.hivemq.cloud";
+const char* mqtt_server = "BROKER URL";
 const int mqtt_port = 8883;
-const char* mqtt_user = "esp32shaft";
-const char* mqtt_pass = "QpGx37E8-tEMx_4";
+const char* mqtt_user = "USERNAME";
+const char* mqtt_pass = "USER PASSWORD";
 
 // Configurações dos sensores
 #define DHTPIN 4          // Pino onde o sensor DHT está conectado
